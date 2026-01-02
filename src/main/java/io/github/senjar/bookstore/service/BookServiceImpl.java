@@ -1,10 +1,10 @@
 package io.github.senjar.bookstore.service;
 
+import io.github.senjar.bookstore.model.Book;
+import io.github.senjar.bookstore.repository.BookRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import io.github.senjar.bookstore.model.Book;
-import io.github.senjar.bookstore.repository.BookRepository;
 
 @Service
 public class BookServiceImpl implements BookService {

@@ -14,8 +14,6 @@ import org.jspecify.annotations.NonNull;
 @Data
 @Table(name = "books")
 public class Book {
-    public Book() {
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +30,6 @@ public class Book {
     private String description;
     @Column(name = "cover_image")
     private String coverImage;
+
+    public Book() { }
 }

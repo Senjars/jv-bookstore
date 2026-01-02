@@ -1,12 +1,12 @@
 package io.github.senjar.bookstore.repository;
 
+import io.github.senjar.bookstore.model.Book;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import io.github.senjar.bookstore.model.Book;
 
 @Service
 public class BookRepositoryImpl implements BookRepository {

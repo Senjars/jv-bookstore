@@ -1,7 +1,7 @@
 package io.github.senjar.bookstore.service;
 
-import java.util.List;
 import io.github.senjar.bookstore.model.Book;
+import java.util.List;
 
 public interface BookService {
 

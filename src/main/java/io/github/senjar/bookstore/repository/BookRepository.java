@@ -1,7 +1,7 @@
 package io.github.senjar.bookstore.repository;
 
-import java.util.List;
 import io.github.senjar.bookstore.model.Book;
+import java.util.List;
 
 public interface BookRepository {
 

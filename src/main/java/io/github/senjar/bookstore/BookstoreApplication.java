@@ -1,13 +1,13 @@
 package io.github.senjar.bookstore;
 
+import io.github.senjar.bookstore.model.Book;
+import io.github.senjar.bookstore.service.BookService;
 import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import io.github.senjar.bookstore.model.Book;
-import io.github.senjar.bookstore.service.BookService;
 
 @SpringBootApplication
 public class BookstoreApplication {
