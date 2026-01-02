@@ -1,15 +1,17 @@
 package io.github.senjar.bookstore.service;
 
-import java.util.List;
-import org.springframework.stereotype.Service;
 import io.github.senjar.bookstore.model.Book;
 import io.github.senjar.bookstore.repository.BookRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
 
     private final BookRepository bookRepository;
 
+    @Autowired
     public BookServiceImpl(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
@@ -21,6 +23,6 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public List<Book> findAll() {
-        return bookRepository.findALL();
+        return bookRepository.findAll();
     }
 }
