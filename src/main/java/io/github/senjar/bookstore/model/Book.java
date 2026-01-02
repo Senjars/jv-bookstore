@@ -31,5 +31,6 @@ public class Book {
     @Column(name = "cover_image")
     private String coverImage;
 
-    public Book() { }
+    public Book() {
+    }
 }
