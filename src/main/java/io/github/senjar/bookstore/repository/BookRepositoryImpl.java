@@ -7,10 +7,9 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import io.github.senjar.bookstore.model.Book;
-import jakarta.persistence.criteria.CriteriaQuery;
 
 @Service
-public class BookRepositoryImpl implements BookRepository{
+public class BookRepositoryImpl implements BookRepository {
 
     private final SessionFactory sessionFactory;
 
@@ -43,11 +42,9 @@ public class BookRepositoryImpl implements BookRepository{
     }
 
     @Override
-    public List<Book> findALL() {
+    public List<Book> findAll() {
         try (Session session = sessionFactory.openSession()) {
-            CriteriaQuery<Book> criteriaQuery = session.
-                    getCriteriaBuilder().createQuery(Book.class);
-            return session.createQuery(criteriaQuery).getResultList();
+            return session.createQuery("from Book", Book.class).getResultList();
         } catch (Exception e) {
             throw new RuntimeException("Can't get all the books", e);
         }
